@@ -34,3 +34,11 @@ You can see it live at: http://playframework-neo4j.herokuapp.com/
 
 Resources:
 https://devcenter.heroku.com/articles/neo4j
+
+Environment configuration
+-----------------
+Project requires neo4j 2.1.2 running server and play2 framework. If your neo4j server location is different than http://localhost:7474/db/data, you have to change the url value in conf/applicationContext.xml
+To run play framework, type in main directory of the project:
+<pre>
+activator run
+</pre>
