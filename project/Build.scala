@@ -11,17 +11,18 @@ object ApplicationBuild extends Build {
     javaCore,
     "javax.inject" % "javax.inject" % "1",
     "asm" % "asm" % "3.3.1",
+    "com.sun.jersey" % "jersey-core" % "1.18.1",
     "org.springframework" % "spring-context" % "3.2.4.RELEASE",
-    "org.springframework.data" % "spring-data-neo4j" % "2.3.1.RELEASE",
-    "org.springframework.data" % "spring-data-neo4j-rest" % "2.3.1.RELEASE" excludeAll(
+    "org.springframework.data" % "spring-data-neo4j" % "3.1.1.RELEASE",
+    "org.springframework.data" % "spring-data-neo4j-rest" % "3.1.1.RELEASE" excludeAll(
       ExclusionRule(organization = "org.neo4j", name="neo4j")
     ),
 
     "org.neo4j" % "neo4j" % "1.9.3" excludeAll(
       ExclusionRule(organization = "org.neo4j", name="neo4j-kernel")
     ),
-    "org.neo4j" % "neo4j-kernel" % "1.9.3" % "test" classifier "tests" classifier "",
-    "org.neo4j" % "neo4j-rest-graphdb" % "1.9.RC2"
+    "org.neo4j" % "neo4j-kernel" % "2.1.2" % "test" classifier "tests" classifier "",
+    "org.neo4j" % "neo4j-rest-graphdb" % "2.0.1"
   )
 
   val main = play.Project(appName, appVersion, appDependencies).settings(
